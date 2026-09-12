@@ -1,0 +1,195 @@
+#network-tool-wrapper * { box-sizing: border-box; }
+#network-tool-wrapper {
+  background: #f8fafc;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #1e293b;
+  padding: 10px;
+  width: 100%;
+}
+#network-tool-wrapper .container {
+  max-width: 650px;
+  width: 100%;
+  margin: 15px auto;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.12);
+  border: 1px solid #bfdbfe;
+}
+#network-tool-wrapper .header {
+  background: #2563eb;
+  color: #ffffff;
+  text-align: center;
+  padding: 24px 20px;
+  margin-bottom: 20px;
+}
+#network-tool-wrapper .header h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 700;
+}
+#network-tool-wrapper .header p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #bfdbfe;
+}
+#network-tool-wrapper .content-body {
+  padding: 0 24px 24px 24px;
+}
+#network-tool-wrapper .status-text {
+  text-align: center;
+  font-size: 15px;
+  color: #2563eb;
+  font-weight: 700;
+  height: 24px;
+  margin-bottom: 15px;
+}
+#network-tool-wrapper .gauge-wrapper {
+  position: relative;
+  width: 240px;
+  height: 130px;
+  margin: 0 auto;
+}
+#network-tool-wrapper .gauge-bg, #network-tool-wrapper .gauge-fill {
+  fill: none;
+  stroke-width: 18;
+  stroke-linecap: round;
+}
+#network-tool-wrapper .gauge-bg { stroke: #e2e8f0; }
+#network-tool-wrapper .gauge-fill {
+  stroke: #2563eb;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transition: stroke-dashoffset 0.1s linear;
+}
+#network-tool-wrapper .speed-display {
+  text-align: center;
+  margin-top: -35px;
+  margin-bottom: 20px;
+}
+#network-tool-wrapper .speed-val {
+  font-size: 46px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1;
+}
+#network-tool-wrapper .speed-unit {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 600;
+  margin-top: 4px;
+}
+#network-tool-wrapper .metrics-primary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+#network-tool-wrapper .card {
+  background: #f8fafc;
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 12px 10px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+#network-tool-wrapper .card.active {
+  border-color: #2563eb;
+  background: #eff6ff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+#network-tool-wrapper .card-label {
+  font-size: 12px;
+  color: #3b82f6;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+#network-tool-wrapper .card-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+#network-tool-wrapper .diag-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1d4ed8;
+  margin: 20px 0 10px;
+  border-bottom: 1px solid #bfdbfe;
+  padding-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#network-tool-wrapper .metrics-secondary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+#network-tool-wrapper .diag-card {
+  background: #f8fafc;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#network-tool-wrapper .diag-label {
+  font-size: 11px;
+  color: #3b82f6;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+#network-tool-wrapper .diag-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-top: 3px;
+  word-break: break-word;
+}
+#network-tool-wrapper .badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+#network-tool-wrapper .badge.good { background: #dcfce7; color: #15803d; }
+#network-tool-wrapper .badge.avg { background: #fef9c3; color: #a16207; }
+#network-tool-wrapper .btn-wrapper {
+  text-align: center;
+  margin-top: 25px;
+}
+#network-tool-wrapper .start-btn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  border: none;
+  padding: 14px 45px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+  width: 80%;
+  max-width: 320px;
+}
+#network-tool-wrapper .start-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.45);
+}
+#network-tool-wrapper .start-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+@media (max-width: 480px) {
+  #network-tool-wrapper .content-body { padding: 0 15px 15px 15px; }
+  #network-tool-wrapper .metrics-secondary { grid-template-columns: 1fr; }
+  #network-tool-wrapper .card-value { font-size: 16px; }
+  #network-tool-wrapper .speed-val { font-size: 38px; }
+}
