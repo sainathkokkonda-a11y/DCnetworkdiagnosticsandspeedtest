@@ -1,0 +1,75 @@
+<div id="network-tool-wrapper">
+  <div class="container">
+    <div class="header">
+      <h2>Network Diagnostics &amp; Speed Test</h2>
+      <p>Real-time Bandwidth &amp; Telemetry Calculations</p>
+    </div>
+
+    <div class="content-body">
+      <div class="status-text" id="statusText">Ready</div>
+
+      <div class="gauge-wrapper">
+        <svg height="130" viewBox="0 0 240 130" width="240">
+          <path class="gauge-bg" d="M 25 120 A 95 95 0 0 1 215 120"></path>
+          <path class="gauge-fill" d="M 25 120 A 95 95 0 0 1 215 120" id="gaugeFill"></path>
+        </svg>
+      </div>
+      
+      <div class="speed-display">
+        <div class="speed-val" id="speedDisplay">0.0</div>
+        <div class="speed-unit">Mbps</div>
+      </div>
+
+      <div class="metrics-primary">
+        <div class="card" id="pingBox">
+          <div class="card-label">Latency (Ping)</div>
+          <div class="card-value" id="pingVal">-- ms</div>
+        </div>
+        <div class="card" id="downloadBox">
+          <div class="card-label">Download</div>
+          <div class="card-value" id="downloadVal">-- Mbps</div>
+        </div>
+        <div class="card" id="uploadBox">
+          <div class="card-label">Upload</div>
+          <div class="card-value" id="uploadVal">-- Mbps</div>
+        </div>
+      </div>
+
+      <div class="diag-title">
+        <span>Network Intelligence</span>
+        <span class="badge" id="qualityBadge">Status: Idle</span>
+      </div>
+      
+      <div class="metrics-secondary">
+        <div class="diag-card">
+          <div class="diag-label">Jitter</div>
+          <div class="diag-value" id="jitterVal">-- ms</div>
+        </div>
+        <div class="diag-card">
+          <div class="diag-label">Connection Type</div>
+          <div class="diag-value" id="connTypeVal">Detecting...</div>
+        </div>
+        <div class="diag-card">
+          <div class="diag-label">Public IP</div>
+          <div class="diag-value" id="ipVal">Fetching...</div>
+        </div>
+        <div class="diag-card">
+          <div class="diag-label">ISP / Network</div>
+          <div class="diag-value" id="ispVal">Fetching...</div>
+        </div>
+        <div class="diag-card">
+          <div class="diag-label">Location</div>
+          <div class="diag-value" id="locationVal">Fetching...</div>
+        </div>
+        <div class="diag-card">
+          <div class="diag-label">Streaming Quality</div>
+          <div class="diag-value" id="streamVal">--</div>
+        </div>
+      </div>
+
+      <div class="btn-wrapper">
+        <button class="start-btn" id="startBtn" onclick="runCompleteDiagnostics()">START DIAGNOSTICS</button>
+      </div>
+    </div>
+  </div>
+</div>
