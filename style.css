@@ -11,10 +11,10 @@
   width: 100%;
   margin: 15px auto;
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(37, 99, 235, 0.12);
-  border: 1px solid #bfdbfe;
+  border: 1.5px solid #1565c0;
 }
 #network-tool-wrapper .header {
   background: #2563eb;
